@@ -1,0 +1,197 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #3a6186, #89253e);
+    background-size: 400% 400%;
+    animation: bgMove 15s ease infinite;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.MusicControls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.MusicControls button {
+    padding: 8px 16px;
+    width: 250px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.MusicControls button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+.Sounds {
+    margin-top: 10px;
+    width: 80%;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.MainBox {
+    width: 600px;
+    height: 90vh;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.Title {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.TitleSong {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.Sounds {
+    margin-top: 5px;
+    width: 80%;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));
+}
+
+.Score {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    padding: 5px 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.Average {
+    border-radius: 25px;
+    height: 50px;
+    width: 250px;
+    background: transparent;
+    color: white;
+    font-size: xx-large;
+    font-family: monospace;
+    padding-left: 30px;
+    border: none;
+    outline: none;
+}
+
+.WholeSystem {
+    flex: 1;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.Track {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.Track:last-child {
+    border-right: none;
+}
+
+.FallingNotesArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.W, .A, .S, .D {
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    width: 35px;
+    height: 35px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.HitZone {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+}
+
+.LetterW, .LetterA, .LetterS, .LetterD {
+    border: solid rgba(0, 255, 0, 0.7);
+    background-color: rgba(173, 255, 47, 0.7);
+    padding: 5px 0;
+    width: 60%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: black;
+}
+
+.TimingLine {
+    height: 3px;
+    background-color: rgba(12, 223, 187, 0.7);
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.Hit {
+    color: green;
+}
+
+.Miss {
+    color: red;
+}

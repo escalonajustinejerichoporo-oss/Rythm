@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rythm</title>
+    <link rel="stylesheet" href="design.css">
+
+</head>
+<body>
+    <div class="Score">
+        <input type="text" class="Average" value="Score:" readonly>
+    </div>
+    <div class="MainBox">
+        <div class="Title">
+            <h1 class="TitleSong">Song: Multo</h1>
+            <audio class="Sounds" src="multo.mp3" controls> </audio>
+                <div class="MusicControls">
+                    <button id="playBtn">▶ Play</button>
+                </div>
+        </div>
+        <div class="WholeSystem">
+            <div class="Track">
+                <div class="FallingNotesArea">
+                    <p class="W">W</p>
+                </div>
+                <div class="TimingLine"></div>
+                <div class="HitZone">
+                    <div class="LetterW">W</div>
+                </div>
+            </div>
+            <div class="Track">
+                <div class="FallingNotesArea">
+                    <p class="A">A</p>
+                </div>
+                <div class="TimingLine"></div>
+                <div class="HitZone">
+                    <div class="LetterA">A</div>
+                </div>
+            </div>
+            <div class="Track">
+                <div class="FallingNotesArea">
+                    <p class="S">S</p>
+                </div>
+                <div class="TimingLine"></div>
+                <div class="HitZone">
+                    <div class="LetterS">S</div>
+                </div>
+            </div>
+            <div class="Track">
+                <div class="FallingNotesArea">
+                    <p class="D">D</p>
+                </div>
+                <div class="TimingLine"></div>
+                <div class="HitZone">
+                    <div class="LetterD">D</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
